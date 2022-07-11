@@ -1,0 +1,4 @@
+ftfy
+spacy==3.0
+murmurhash==1.0.5
+numpy==1.21
