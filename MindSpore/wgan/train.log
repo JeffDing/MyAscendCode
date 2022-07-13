@@ -1,0 +1,7 @@
+usage: train.py [-h] [--device_target DEVICE_TARGET] [--device_id DEVICE_ID] [--dataset DATASET] [--dataroot DATAROOT]
+                [--is_modelarts IS_MODELARTS] [--data_url DATA_URL] [--train_url TRAIN_URL] [--workers WORKERS]
+                [--batchSize BATCHSIZE] [--imageSize IMAGESIZE] [--nc NC] [--nz NZ] [--ngf NGF] [--ndf NDF] [--niter NITER]
+                [--lrD LRD] [--lrG LRG] [--beta1 BETA1] [--netG NETG] [--netD NETD] [--clamp_lower CLAMP_LOWER]
+                [--clamp_upper CLAMP_UPPER] [--Diters DITERS] [--noBN NOBN] [--n_extra_layers N_EXTRA_LAYERS]
+                [--experiment EXPERIMENT] [--adam]
+train.py: error: argument --dataset: expected one argument
