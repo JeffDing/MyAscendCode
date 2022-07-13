@@ -56,12 +56,8 @@ if __name__ == '__main__':
             args_opt.experiment = '/cache/train_output'
         os.system('mkdir {0}'.format(args_opt.experiment))
         context.set_context(device_id=int(os.getenv('DEVICE_ID')))
-        data_name = 'LSUN-bedroom.zip'
         local_data_url = '/cache/data_path/'
         mox.file.copy_parallel(src_url=args_opt.data_url, dst_url=local_data_url)
-        zip_command = "unzip -o -q %s -d %s" % (local_data_url + data_name, local_data_url)
-        os.system(zip_command)
-        print("Unzip success!")
 
         dataset = create_dataset(local_data_url, args_opt.dataset, args_opt.batchSize, args_opt.imageSize, 1,
                                  args_opt.workers, target)
