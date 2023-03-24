@@ -1,0 +1,1 @@
+python LeNet.py --data_path=./dataset --output_path=./output --batch_size=32 --epoch=10 --step=1000

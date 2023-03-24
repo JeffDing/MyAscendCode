@@ -1,0 +1,138 @@
+{
+    "[['BiasAdd_10', 'Conv2D_10'], ['Relu_10', 'gradients/Conv2D_11_grad/Conv2DBackpropInput', 'gradients/Relu_10_grad/ReluGrad']]": {
+        "status_data": {
+            "bank_append": false,
+            "bank_hit": true,
+            "bank_reserved": true,
+            "bank_update": false
+        }
+    },
+    "[['BiasAdd_11', 'Conv2D_11'], ['Relu_11', 'gradients/Reshape_6_grad/Reshape', 'gradients/Relu_11_grad/ReluGrad']]": {
+        "status_data": {
+            "bank_append": false,
+            "bank_hit": true,
+            "bank_reserved": true,
+            "bank_update": false
+        }
+    },
+    "[['BiasAdd_9', 'Conv2D_9'], ['Relu_9', 'gradients/Conv2D_10_grad/Conv2DBackpropInput', 'gradients/Relu_9_grad/ReluGrad']]": {
+        "status_data": {
+            "bank_append": false,
+            "bank_hit": true,
+            "bank_reserved": true,
+            "bank_update": false
+        }
+    },
+    "[['MatMul_4']]": {
+        "status_data": {
+            "bank_append": false,
+            "bank_hit": true,
+            "bank_reserved": true,
+            "bank_update": false
+        }
+    },
+    "[['conv2d_transpose_12']]": {
+        "status_data": {
+            "bank_append": false,
+            "bank_hit": true,
+            "bank_reserved": true,
+            "bank_update": false
+        }
+    },
+    "[['conv2d_transpose_13']]": {
+        "status_data": {
+            "bank_append": false,
+            "bank_hit": true,
+            "bank_reserved": true,
+            "bank_update": false
+        }
+    },
+    "[['conv2d_transpose_14']]": {
+        "status_data": {
+            "bank_append": false,
+            "bank_hit": true,
+            "bank_reserved": true,
+            "bank_update": false
+        }
+    },
+    "[['gradients/Conv2D_2_grad/Conv2DBackpropInput']]": {
+        "status_data": {
+            "bank_append": false,
+            "bank_hit": true,
+            "bank_reserved": true,
+            "bank_update": false
+        }
+    },
+    "[['gradients/Conv2D_4_grad/Conv2DBackpropInput']]": {
+        "status_data": {
+            "bank_append": false,
+            "bank_hit": true,
+            "bank_reserved": true,
+            "bank_update": false
+        }
+    },
+    "[['gradients/MatMul_2_grad/MatMul']]": {
+        "status_data": {
+            "bank_append": false,
+            "bank_hit": true,
+            "bank_reserved": true,
+            "bank_update": false
+        }
+    },
+    "[['gradients/MatMul_2_grad/MatMul_1']]": {
+        "status_data": {
+            "bank_append": false,
+            "bank_hit": true,
+            "bank_reserved": true,
+            "bank_update": false
+        }
+    },
+    "[['gradients/conv2d_transpose_10_grad/Conv2D']]": {
+        "status_data": {
+            "bank_append": false,
+            "bank_hit": true,
+            "bank_reserved": true,
+            "bank_update": false
+        }
+    },
+    "[['gradients/conv2d_transpose_3_grad/Shape', 'gradients/conv2d_transpose_3_grad/Conv2DBackpropFilter']]": {
+        "status_data": {
+            "bank_append": false,
+            "bank_hit": true,
+            "bank_reserved": true,
+            "bank_update": false
+        }
+    },
+    "[['gradients/conv2d_transpose_4_grad/Shape', 'gradients/conv2d_transpose_4_grad/Conv2DBackpropFilter']]": {
+        "status_data": {
+            "bank_append": false,
+            "bank_hit": true,
+            "bank_reserved": true,
+            "bank_update": false
+        }
+    },
+    "[['gradients/conv2d_transpose_5_grad/Conv2D']]": {
+        "status_data": {
+            "bank_append": false,
+            "bank_hit": true,
+            "bank_reserved": true,
+            "bank_update": false
+        }
+    },
+    "[['gradients/conv2d_transpose_5_grad/Shape', 'gradients/conv2d_transpose_5_grad/Conv2DBackpropFilter']]": {
+        "status_data": {
+            "bank_append": false,
+            "bank_hit": true,
+            "bank_reserved": true,
+            "bank_update": false
+        }
+    },
+    "[['gradients/conv2d_transpose_6_grad/Conv2D']]": {
+        "status_data": {
+            "bank_append": false,
+            "bank_hit": true,
+            "bank_reserved": true,
+            "bank_update": false
+        }
+    }
+}
