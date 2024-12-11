@@ -139,8 +139,7 @@ def main():
         print("ModelLink:")
         print(modellink_outputs.shape, modellink_outputs.dtype)
         print(modellink_outputs)
-    np.save("./forward_out/modellink_hf_internlm2_5_7b_chat_logits_fp16.npy", modellink_outputs.to(torch.float).cpu().numpy())
-
+        np.save("./forward_out/modellink_hf_internlm2_5_7b_chat_logits_fp16.npy", modellink_outputs.to(torch.float).cpu().numpy())
 
 if __name__ == "__main__":
     main()
