@@ -1,5 +1,6 @@
 #!/bin/bash
 
+mkdir forward_out
 # The number of parameters is not aligned
 export CUDA_DEVICE_MAX_CONNECTIONS=1
 
