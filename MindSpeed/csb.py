@@ -15,7 +15,7 @@
 # limitations under the License.
 from typing import Union
 
-from modellink import megatron_adaptor
+from mindspeed_llm import megatron_adaptor
 from megatron.core.models.gpt.gpt_layer_specs import get_gpt_layer_with_transformer_engine_spec, \
     get_gpt_layer_local_spec
 from megatron.core.transformer.spec_utils import import_module
@@ -25,8 +25,8 @@ from megatron.training.initialize import initialize_megatron
 from megatron.training.arguments import core_transformer_config_from_args
 from megatron.training.yaml_arguments import core_transformer_config_from_yaml
 
-from modellink.tasks.inference.infer_base import task_factory, add_text_generate_args
-from modellink.tasks.inference.module import GPTModelInfer, MegatronModuleForCausalLM
+from mindspeed_llm.tasks.inference.infer_base import task_factory, add_text_generate_args
+from mindspeed_llm.tasks.inference.module import GPTModelInfer, MegatronModuleForCausalLM
 
 from torch_npu.contrib import transfer_to_npu
 from transformers import AutoTokenizer, AutoModel
