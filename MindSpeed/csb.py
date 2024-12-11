@@ -140,7 +140,7 @@ def main():
         print(modellink_outputs.shape, modellink_outputs.dtype)
         print(modellink_outputs)
         
-    cosine_similarity =F.cosine_similarity(hf_logits, modellink_outputs, dim=1)
+    cosine_similarity =F.cosine_similarity(hf_logits, modellink_outputs, dim=1).mean()
     print(f"Cosine Similarity Between HF and modellink embeddings: {cosine_similarity}")
     
     np.save("./forward_out/modellink_hf_internlm2_5_7b_chat_logits_fp16.npy", modellink_outputs.to(torch.float).cpu().numpy())
