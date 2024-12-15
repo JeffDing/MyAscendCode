@@ -11,7 +11,7 @@ def parse_args():
         "--model_name_or_path",
         type=str,
         help="Path to model",
-        default="model_path",
+        default="pretrainmodel/Mistral-7B-Instruct-v0.1-GGUF",
     )
     args = parser.parse_args()
     return args
@@ -25,13 +25,13 @@ def main():
     else:
         device = "cpu"  
     #device = "cpu"  
-    start_time = time.time()
-    filename = "monadgpt.Q2_K.gguf"
+    filename = "mistral-7b-instruct-v0.1.Q2_K.gguf"
     tokenizer = AutoTokenizer.from_pretrained(model_path, gguf_file=filename, trust_remote_code=True)
     model = AutoModelForCausalLM.from_pretrained(
         model_path, gguf_file=filename, device_map=device
     )
-
+    
+    start_time = time.time()
     
     prompt = "Q: hello who are you?\nA:"
     input_ids = tokenizer(prompt, return_tensors="pt").input_ids
@@ -45,4 +45,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
