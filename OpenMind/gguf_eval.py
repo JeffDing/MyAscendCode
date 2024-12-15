@@ -1,6 +1,6 @@
 import torch.nn.functional as F
 from torch import Tensor
-from openmind import AutoTokenizer, AutoModelForCausalLM
+from openmind import AutoTokenizer, AutoModel
 import torch
 import sys
 import argparse
@@ -20,7 +20,7 @@ def parse_args():
 def evaluate_on_device(model_path, input_texts, device):
     filename = "mistral-7b-instruct-v0.1.Q2_K.gguf"
     tokenizer = AutoTokenizer.from_pretrained(model_path, gguf_file=filename, trust_remote_code=True)
-    model = AutoModelForCausalLM.from_pretrained(
+    model = AutoModel.from_pretrained(
         model_path, gguf_file=filename, device_map=device
     )
     tokenizer.add_special_tokens({'pad_token': '[PAD]'})
