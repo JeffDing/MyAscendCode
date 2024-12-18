@@ -13,7 +13,7 @@ def parse_args():
         "--model_name_or_path",
         type=str,
         help="Path to model",
-        default="models/Cerebras-GPT-590M",
+        default="pretrainmodel/MoE-Girl-1BA-7BT",
     )
     args = parser.parse_args()
     return args
@@ -37,7 +37,7 @@ def main():
         },
         {"role": "user", "content": "How many helicopters can a human eat in one sitting?"},
     ]
-    prompt = pipe.tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+    prompt = pipe.pipeline.tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
     outputs = pipe(prompt, max_new_tokens=256, do_sample=True, temperature=0.7, top_k=50, top_p=0.95)
     print(outputs[0]["generated_text"])
     
