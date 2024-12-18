@@ -19,7 +19,7 @@ def parse_args():
         "--model_name_or_path",
         type=str,
         help="Path to model",
-        default="jeffding/AlephBERT-openmind",
+        default="pretrainmodel/MoE-Girl-1BA-7BT",
     )
     args = parser.parse_args()
     return args
@@ -43,31 +43,14 @@ def main():
     
     start_time = time.time()
     prompt = "Tell me about AI"
-    prompt_template=f'''<s>[INST] {prompt} [/INST]
-    '''
+    prompt_template=f'''{prompt} '''
 
     print("\n\n*** Generate:")
 
     input_ids = tokenizer(prompt_template, return_tensors='pt').input_ids.to(device)
     output = model.generate(inputs=input_ids, temperature=0.7, do_sample=True, top_p=0.95, top_k=40, max_new_tokens=512)
-    print(tokenizer.decode(output[0]))
-
-    # Inference can also be done using transformers' pipeline
-
-    print("*** Pipeline:")
-    pipe = pipeline(
-        "text-generation",
-        model=model,
-        tokenizer=tokenizer,
-        max_new_tokens=512,
-        do_sample=True,
-        temperature=0.7,
-        top_p=0.95,
-        top_k=40,
-        repetition_penalty=1.1
-    )
-
-    print(pipe(prompt_template)[0]['generated_text'])
+    generated_text = tokenizer.decode(output[0], skip_special_tokens=True)
+    print(generated_text)
     
     end_time = time.time()
     print(f"硬件环境：{device},推理执行时间：{end_time - start_time}秒")
