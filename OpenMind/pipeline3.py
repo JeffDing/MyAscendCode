@@ -43,7 +43,8 @@ def main():
     
     start_time = time.time()
     prompt = "Tell me about AI"
-    prompt_template=f'''{prompt} '''
+    prompt_template=f'''<s>[INST] {prompt} [/INST]
+    '''
 
     print("\n\n*** Generate:")
 
