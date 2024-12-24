@@ -1,5 +1,5 @@
 import argparse
-
+import time
 import torch
 from openmind import pipeline, is_torch_npu_available
 
