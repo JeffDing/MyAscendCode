@@ -30,9 +30,10 @@ def main():
     
     start_time = time.time()
     
-    nlp = pipeline("ner", model=model, tokenizer=tokenizer, aggregation_strategy="simple", device=device)
-    output = nlp("Apple est créée le 1er avril 1976 dans le garage de la maison d'enfance de Steve Jobs à Los Altos en Californie par Steve Jobs, Steve Wozniak et Ronald Wayne14, puis constituée sous forme de société le 3 janvier 1977 à l'origine sous le nom d'Apple Computer, mais pour ses 30 ans et pour refléter la diversification de ses produits, le mot « computer » est retiré le 9 janvier 2015.")
-    print(f'>>>output={output}')
+    token_classifier = pipeline(task="token-classification", model=model_path, framework="pt", device=device)
+    
+    output = token_classifier("This is a test !")
+    print(output)
     
     end_time = time.time()
     print(f"硬件环境：{device},推理执行时间：{end_time - start_time}秒")
