@@ -14,7 +14,7 @@ def parse_args():
         "--model_name_or_path",
         type=str,
         help="Path to model",
-        default="pretrainmodel/gliner_large-v2.1",
+        default="pretrainmodel/t5-small-e2e-qg",
     )
     args = parser.parse_args()
     return args
@@ -30,8 +30,12 @@ def main():
     
     start_time = time.time()
     generator = pipeline("text2text-generation", model=model_path, framework="pt", device=device)
-
-    output = generator("translate English to German: How old are you?", do_sample=False)
+    
+    text = "Python is an interpreted, high-level, general-purpose programming language. Created by Guido van Rossum \
+and first released in 1991, Python's design philosophy emphasizes code \
+readability with its notable use of significant whitespace."
+    
+    output = generator(text, do_sample=False)
     print(output)
     
     end_time = time.time()
