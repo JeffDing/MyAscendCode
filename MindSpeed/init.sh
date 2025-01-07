@@ -18,6 +18,8 @@ pip3 install --upgrade apex-0.1
 # 拉取环境
 conda activate ModelLink
 git clone https://gitee.com/ascend/MindSpeed-LLM.git 
+git clone https://github.com/nvidia/Megatron-LM.git
+# 如果下载不了github的话使用国产镜像 
 git clone https://openi.pcl.ac.cn/JeffDing/Megatron-LM.git
 cd Megatron-LM
 git checkout core_r0.7.0
