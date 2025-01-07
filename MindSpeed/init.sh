@@ -32,6 +32,7 @@ mkdir dataset
 mkdir ckpt
 
 # 安装依赖
+cd ..
 git clone https://gitee.com/ascend/MindSpeed.git
 rm -rf /home/ma-user/anaconda3/envs/ModelLink/lib/python3.8/site-packages/mindspeed.egg-link
 cd MindSpeed
