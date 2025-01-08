@@ -19,7 +19,7 @@ MASTER_ADDR=localhost
 MASTER_PORT=6011
 NNODES=1
 NODE_RANK=0
-NPUS_PER_NODE=1
+NPUS_PER_NODE=8
 DISTRIBUTED_ARGS="--nproc_per_node $NPUS_PER_NODE --nnodes $NNODES --node_rank $NODE_RANK --master_addr $MASTER_ADDR --master_port $MASTER_PORT"
 # configure generation parameters
 python -m torch.distributed.launch $DISTRIBUTED_ARGS evaluation.py   \
@@ -29,7 +29,7 @@ python -m torch.distributed.launch $DISTRIBUTED_ARGS evaluation.py   \
        --max-new-tokens 1 \
        --evaluation-batch-size 1 \
        --max-position-embeddings 4096 \
-       --tensor-model-parallel-size 1  \
+       --tensor-model-parallel-size 8  \
        --pipeline-model-parallel-size 1  \
        --num-layers 32  \
        --hidden-size 4096  \
