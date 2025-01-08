@@ -46,10 +46,8 @@ conda install binutils
 export PATH=/home/ma-user/anaconda3/envs/ModelLink/bin:$PATH
 cp /home/ma-user/anaconda3/envs/ModelLink/bin/aarch64-conda-linux-gnu-ld /home/ma-user/anaconda3/envs/ModelLink/bin/ld # 非必要
 
-bash examples/mcore/llama2/ckpt_convert_llama2_hf2mcore.sh
-
+# 转换数据集
 mkdir ./finetune_dataset
-
 python ./preprocess_data.py \
     --input ./dataset/alpaca/data \
     --tokenizer-name-or-path ./model_from_hf/llama2-7b-hf \
