@@ -12,13 +12,13 @@ MASTER_ADDR=localhost
 MASTER_PORT=6001
 NNODES=1
 NODE_RANK=0
-NPUS_PER_NODE=1
+NPUS_PER_NODE=8
 WORLD_SIZE=$(($NPUS_PER_NODE*$NNODES))
 
 DISTRIBUTED_ARGS="--nproc_per_node $NPUS_PER_NODE --nnodes $NNODES --node_rank $NODE_RANK --master_addr $MASTER_ADDR --master_port $MASTER_PORT"
 
 python -m torch.distributed.launch $DISTRIBUTED_ARGS inference.py \
-       --tensor-model-parallel-size 1  \
+       --tensor-model-parallel-size 8  \
        --pipeline-model-parallel-size 1  \
        --use-mcore-models \
        --use-kv-cache \
