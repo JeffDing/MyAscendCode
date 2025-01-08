@@ -14,7 +14,7 @@ DATA_PATH="./finetune_dataset"
 TOKENIZER_MODEL="./model_from_hf/llama2-7b-hf"
 CKPT_LOAD_DIR="./model_weights/Llama2-mcore"
 
-TP=1
+TP=8
 PP=1
 
 DISTRIBUTED_ARGS="
