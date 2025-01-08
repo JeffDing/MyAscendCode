@@ -14,8 +14,8 @@ CKPT_SAVE_DIR="./ckpt"
 DATA_PATH="your data path"
 TOKENIZER_MODEL="./model_from_hf/llama2-7b-hf/tokenizer.model"
 CKPT_LOAD_DIR="./model_weights/Llama2-mcore"
-TP=1
-PP=2
+TP=8
+PP=1
 
 DISTRIBUTED_ARGS="
     --nproc_per_node $GPUS_PER_NODE \
