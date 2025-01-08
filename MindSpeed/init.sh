@@ -36,8 +36,8 @@ cd ..
 git clone https://gitee.com/ascend/MindSpeed.git
 rm -rf /home/ma-user/anaconda3/envs/ModelLink/lib/python3.8/site-packages/mindspeed.egg-link
 cd MindSpeed
-# checkout commit from MindSpeed core_r0.7.0 in 2024.11.04
-git checkout c9d20b5 
+# checkout commit from MindSpeed core_r0.7.0 in 2024.12.13
+git checkout 4045864e6df
 pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 pip3 install -e .
 cd ../MindSpeed-LLM
