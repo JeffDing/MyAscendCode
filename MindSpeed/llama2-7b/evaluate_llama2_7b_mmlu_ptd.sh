@@ -11,7 +11,7 @@ source /usr/local/Ascend/ascend-toolkit/set_env.sh
 TOKENIZER_PATH="./model_from_hf/llama2-7b-hf"  #tokenizer path
 CHECKPOINT="./ckpt/"  #model path
 # configure task and data path
-DATA_PATH="./dataset/mmlu/data/"
+DATA_PATH="./dataset/mmlu/data/test/"
 TASK="mmlu"
 
 # distributed config
