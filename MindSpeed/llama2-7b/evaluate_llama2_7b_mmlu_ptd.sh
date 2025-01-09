@@ -1,6 +1,6 @@
 #!/bin/bash
 export CUDA_DEVICE_MAX_CONNECTIONS=1
-export ASCEND_RT_VISIBLE_DEVICES=1
+export ASCEND_RT_VISIBLE_DEVICES=0,1,2,3,4,5,6,7
 export LD_LIBRARY_PATH=/usr/local/lib:/usr/local/lib:/root/miniconda3/lib:$LD_LIBRARY_PATH
 export HCCL_CONNECT_TIMEOUT=1200
 export COMBINED_ENABLE=1
@@ -9,9 +9,9 @@ source /usr/local/Ascend/ascend-toolkit/set_env.sh
 
 # modify script model path and tokenizer path
 TOKENIZER_PATH="./model_from_hf/llama2-7b-hf"  #tokenizer path
-CHECKPOINT="./ckpt/llama2-7b-mindspeed-llm-tp1"  #model path
+CHECKPOINT="./ckpt/"  #model path
 # configure task and data path
-DATA_PATH="./dataset/mmlu/test/"
+DATA_PATH="./dataset/mmlu/data/test/"
 TASK="mmlu"
 
 # distributed config
@@ -54,6 +54,3 @@ python -m torch.distributed.launch $DISTRIBUTED_ARGS evaluation.py   \
        --make-vocab-size-divisible-by 1 \
        --use-mcore-models \
        --seed 42 | tee logs/evaluation_llama2_7b_${TASK}.log
-
-
-
