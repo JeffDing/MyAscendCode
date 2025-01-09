@@ -10,7 +10,7 @@ NODE_RANK=0
 WORLD_SIZE=$(($GPUS_PER_NODE*$NNODES))
 
 CKPT_SAVE_DIR="./ckpt"
-DATA_PATH="./finetune_dataset"
+DATA_PATH="./finetune_dataset/alpaca"
 TOKENIZER_MODEL="./model_from_hf/llama2-7b-hf"
 CKPT_LOAD_DIR="./model_weights/Llama2-mcore"
 
