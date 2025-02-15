@@ -66,6 +66,9 @@ bash examples/mcore/llama2/ckpt_convert_llama2_hf2mcore.sh
 # 微调
 bash examples/mcore/llama2/tune_llama2_7b_full_ptd.sh
 
+# 评估
+bash examples/mcore/llama2/evaluate_llama2_7b_mmlu_ptd.sh
+
 # 推理
 bash examples/mcore/llama2/generate_llama2_7b_ptd.sh
 
