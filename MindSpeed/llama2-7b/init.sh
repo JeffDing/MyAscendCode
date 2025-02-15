@@ -36,20 +36,14 @@ cd ..
 git clone https://gitee.com/ascend/MindSpeed.git
 rm -rf /home/ma-user/anaconda3/envs/ModelLink/lib/python3.8/site-packages/mindspeed.egg-link
 cd MindSpeed
-# checkout commit from MindSpeed core_r0.7.0 in 2024.12.13
-# git checkout 4045864e6df
-git checkout core_r0.8.0
-pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+git checkout 9b3ad3fd928  # checkout commit from MindSpeed core_r0.8.0 in 2024.12.25
+pip install -r requirements.txt 
 pip3 install -e .
 cd ../MindSpeed-LLM
 pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 conda install binutils
 export PATH=/home/ma-user/anaconda3/envs/ModelLink/bin:$PATH
 cp /home/ma-user/anaconda3/envs/ModelLink/bin/aarch64-conda-linux-gnu-ld /home/ma-user/anaconda3/envs/ModelLink/bin/ld # 非必要
-
-# 下载模型
-export HF_ENDPOINT=https://hf-mirror.com
-huggingface-cli download --resume-download meta-llama/Llama-2-7b --local-dir Llama-2-7b --local-dir-use-symlinks False --token hf_***
 
 # 转换数据集
 mkdir ./finetune_dataset
