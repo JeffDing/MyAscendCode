@@ -9,5 +9,5 @@ python convert_ckpt.py \
     --target-tensor-parallel-size 4 \
     --target-pipeline-parallel-size 1 \
     --load-dir ./ckpt/ \
-    --save-dir ./model_from_hf/llama2-7b-hf/ \
-    --use-mcore-models 
+    --save-dir ./model_from_hf/llama2-7b-hf_tune/ \
+    --use-mcore-models
