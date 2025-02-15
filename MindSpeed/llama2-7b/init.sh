@@ -22,7 +22,7 @@ git clone https://github.com/nvidia/Megatron-LM.git
 # 如果下载不了github的话使用国产镜像 
 git clone https://openi.pcl.ac.cn/JeffDing/Megatron-LM.git
 cd Megatron-LM
-git checkout core_r0.7.0
+git checkout core_r0.8.0
 cp -r megatron ../MindSpeed-LLM/
 cd ..
 cd MindSpeed-LLM
@@ -37,7 +37,8 @@ git clone https://gitee.com/ascend/MindSpeed.git
 rm -rf /home/ma-user/anaconda3/envs/ModelLink/lib/python3.8/site-packages/mindspeed.egg-link
 cd MindSpeed
 # checkout commit from MindSpeed core_r0.7.0 in 2024.12.13
-git checkout 4045864e6df
+# git checkout 4045864e6df
+git checkout core_r0.8.0
 pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 pip3 install -e .
 cd ../MindSpeed-LLM
