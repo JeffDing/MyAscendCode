@@ -48,7 +48,7 @@ cp /home/ma-user/anaconda3/envs/ModelLink/bin/aarch64-conda-linux-gnu-ld /home/m
 
 # 下载模型
 export HF_ENDPOINT=https://hf-mirror.com
-huggingface-cli download --resume-download meta-llama/Llama-2-7b --local-dir Llama-2-7b --local-dir-use-symlinks False
+huggingface-cli download --resume-download meta-llama/Llama-2-7b --local-dir Llama-2-7b --local-dir-use-symlinks False --token hf_***
 
 # 转换数据集
 mkdir ./finetune_dataset
