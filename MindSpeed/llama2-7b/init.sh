@@ -1,3 +1,6 @@
+# 安装文档地址
+https://gitee.com/ascend/MindSpeed-LLM/blob/master/docs/features/install_guide.md
+
 # 创建环境
 # python3.8
 conda create -n ModelLink python=3.8
