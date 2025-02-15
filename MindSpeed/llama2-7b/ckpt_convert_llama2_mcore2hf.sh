@@ -6,8 +6,8 @@ python convert_ckpt.py \
     --model-type GPT \
     --load-model-type mg \
     --save-model-type hf \
-    --target-tensor-parallel-size 4 \
+    --target-tensor-parallel-size 8 \
     --target-pipeline-parallel-size 1 \
     --load-dir ./ckpt/ \
-    --save-dir ./model_from_hf/llama2-7b-hf_tune/ \
-    --use-mcore-models
+    --save-dir ./model_from_hf/llama2-7b-hf/ \
+    --use-mcore-models 
