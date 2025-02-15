@@ -46,6 +46,10 @@ conda install binutils
 export PATH=/home/ma-user/anaconda3/envs/ModelLink/bin:$PATH
 cp /home/ma-user/anaconda3/envs/ModelLink/bin/aarch64-conda-linux-gnu-ld /home/ma-user/anaconda3/envs/ModelLink/bin/ld # 非必要
 
+# 下载模型
+export HF_ENDPOINT=https://hf-mirror.com
+huggingface-cli download --resume-download meta-llama/Llama-2-7b --local-dir Llama-2-7b --local-dir-use-symlinks False
+
 # 转换数据集
 mkdir ./finetune_dataset
 python ./preprocess_data.py \
