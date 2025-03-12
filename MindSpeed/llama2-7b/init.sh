@@ -39,7 +39,7 @@ cd ..
 git clone https://gitee.com/ascend/MindSpeed.git
 rm -rf /home/ma-user/anaconda3/envs/ModelLink/lib/python3.8/site-packages/mindspeed.egg-link
 cd MindSpeed
-git checkout 9b3ad3fd928  # checkout commit from MindSpeed core_r0.8.0 in 2024.12.25
+git checkout 0dfa0035ec54d9a74b2f6ee2867367df897299df  # checkout commit from MindSpeed core_r0.8.0 in 2025.02.26
 pip install -r requirements.txt 
 pip3 install -e .
 cd ../MindSpeed-LLM
@@ -71,7 +71,6 @@ bash examples/mcore/llama2/evaluate_llama2_7b_mmlu_ptd.sh
 
 # 推理
 bash examples/mcore/llama2/generate_llama2_7b_ptd.sh
-
 
 # 复制配置文件
 rm -rf llama2-7b/.ipynb_checkpoints/
