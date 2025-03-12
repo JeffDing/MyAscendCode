@@ -49,16 +49,7 @@ export PATH=/home/ma-user/anaconda3/envs/ModelLink/bin:$PATH
 cp /home/ma-user/anaconda3/envs/ModelLink/bin/aarch64-conda-linux-gnu-ld /home/ma-user/anaconda3/envs/ModelLink/bin/ld # 非必要
 
 # 转换数据集
-mkdir ./finetune_dataset
-python ./preprocess_data.py \
-    --input ./dataset/alpaca/data \
-    --tokenizer-name-or-path ./model_from_hf/llama2-7b-hf \
-    --output-prefix ./finetune_dataset/alpaca \
-    --workers 4 \
-    --log-interval 1000 \
-    --tokenizer-type PretrainedFromHF \
-    --handler-name AlpacaStyleInstructionHandler \
-    --prompt-type llama2
+bash examples/mcore/llama2/data_convert_llama2_pretrain.sh
     
 # 转换模型
 bash examples/mcore/llama2/ckpt_convert_llama2_hf2mcore.sh
